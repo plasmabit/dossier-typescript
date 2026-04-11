@@ -1,0 +1,43 @@
+person: "human" ::
+	name: "John"
+	surname: "Doe"
+	wallet: "open" ::
+		currency: "USD"
+		value: 294.12
+	;;
+;;
+fridgeContents: [
+	"cola",
+	"chicken",
+	"cheese sauce",
+]
+purse: [
+	wallet ::
+		currency: "USD"
+		value: 190.01
+	;;,
+	::
+		color: "red"
+		position ::
+			x: (11.45)
+			y: (-4.8)
+		;;
+	;;,
+]
+isSummer: true
+sale: null
+tags: []
+pillow :: ;;
+floats ::
+	zeroes: [
+		(0),
+		(0.0),
+		(0e0),
+	]
+	exponents: [
+		(0e0),
+		(1e2),
+		(-2e21),
+		(+7e2),
+	]
+;;

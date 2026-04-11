@@ -1,0 +1,65 @@
+type: 'album' ::
+	name: 'FreeCodeCamp Responsive Web Design Certification'
+	source: 'web-course' ::
+		url: 'https://www.freecodecamp.org/learn/responsive-web-design-v9/'
+		describe: 'HTML' ::
+			describe: 'Basic HTML' ::
+				describe: 'Understanding HTML attributes' ::
+					collection: 'What Role Does HTML Play on the Web' ::
+						related: [
+							'https://www.freecodecamp.org/learn/responsive-web-design-v9/lecture-understanding-html-attributes/what-is-html',
+						]
+						concerns: [
+							::
+								name: 'HTML'
+								index: 1
+							;;,
+							::
+								name: 'HTML element'
+								index: 2
+							;;,
+							::
+								name: 'HTML content'
+								index: 2
+							;;,
+							::
+								name: 'HTML tag'
+								index: 2
+							;;,
+							::
+								name: 'HTML void element'
+								index: 2
+							;;,
+						]
+					;;
+				;;
+			;;
+		;;
+		describe: 'Computers' :: ;;
+		describe: 'CSS' ::
+			collection: 'CSS review' ::
+				related: [
+					'https://www.freecodecamp.org/learn/responsive-web-design-v9/review-css/review-css',
+				]
+				concerns: [
+					::
+						name: 'CSS'
+						depth: 1
+					;;,
+					::
+						name: 'CSS rule'
+						depth: 2
+					;;,
+					::
+						name: 'CSS selector'
+						depth: 2
+					;;,
+					::
+						name: 'CSS declaration block'
+						depth: 2
+					;;,
+				]
+			;;
+		;;
+	;;
+;;

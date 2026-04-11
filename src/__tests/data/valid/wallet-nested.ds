@@ -1,0 +1,8 @@
+wallet: [
+	text ::
+		text: "text"
+	;;,
+] ::
+	currency: "USD"
+	value: 294.12
+;;

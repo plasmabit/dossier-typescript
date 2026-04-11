@@ -1,0 +1,15 @@
+store: "downtown" ::
+	name: "Hidden Treasures"
+	nearby: true
+	inventory: [
+		apple ::
+			qty: 10
+			price: 1.25
+		;;,
+		milk ::
+			qty: 4
+			price: 3.50
+		;;,
+	]
+	active: true
+;;

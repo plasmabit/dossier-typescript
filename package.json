@@ -1,0 +1,32 @@
+{
+	"name": "dossier-typescript",
+	"version": "0.1.0",
+	"description": "A TypeScript library for lexing, parsing, and validating Dossier.",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"bin": {
+		"dossier": "./dist/cli/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "npm run clean && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+		"clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+		"prepare": "npm run build",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
+		"test": "vitest run",
+		"pack:check": "npm pack --dry-run",
+		"ci": "npm run typecheck && npm test && npm run build && npm run pack:check"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"devDependencies": {
+		"@types/node": "^25.5.2",
+		"tsc-alias": "^1.8.16",
+		"typescript": "^5.8.2",
+		"vitest": "^4.1.3"
+	}
+}

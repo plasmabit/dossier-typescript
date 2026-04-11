@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "Node16",
+		"moduleResolution": "Node16",
+		"types": ["node", "vitest/globals"],
+		"paths": {
+			"@src": ["./src/index.ts"],
+			"@src/*": ["./src/*"],
+			"@types": ["./src/types/index.ts"],
+			"@types/*": ["./src/types/*"],
+			"@parser": ["./src/parser/index.ts"],
+			"@parser/*": ["./src/parser/*"],
+			"@validator": ["./src/validator/index.ts"],
+			"@validator/*": ["./src/validator/*"],
+			"@lexer": ["./src/lexer/index.ts"],
+			"@lexer/*": ["./src/lexer/*"],
+			"@tests": ["./src/__tests/*"]
+		},
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true
+	},
+	"include": ["src"]
+}

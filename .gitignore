@@ -1,0 +1,17 @@
+*
+
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE
+!.prettierrc.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!tsconfig.build.json
+!vitest.config.ts
+
+!src/
+!src/**
+!.github/
+!.github/**
