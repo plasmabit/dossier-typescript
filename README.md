@@ -73,3 +73,19 @@ expedition: "night-run" ::
 	]
 ;;
 ```
+
+## Printing Dossier
+
+`printDossier` converts a Dossier AST back into canonical, parseable Dossier source.
+
+```ts
+import { Lexer, Parser, printDossier } from 'dossier-typescript';
+
+const source = 'person: "human"';
+const dossier = new Parser(new Lexer(source).tokenize()).parse();
+
+printDossier(dossier); // person: "human"
+```
+
+The printer validates identifiers against the Dossier grammar. Identifiers must start with an
+ASCII letter and may contain only ASCII letters and digits after that.

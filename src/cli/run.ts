@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { Lexer, Parser } from '../index';
-import { renderDossierTree, serializeDossier, serializeTokens } from './formatters';
+import { dossierToJSON, renderDossierTree, serializeTokens } from './formatters';
 
 type OutputWriter = {
 	write(chunk: string): unknown;
@@ -81,7 +81,7 @@ export function runCli(
 				const parser = new Parser(tokens);
 				const dossier = parser.parse();
 
-				environment.stdout.write(`${JSON.stringify(serializeDossier(dossier), null, 2)}\n`);
+				environment.stdout.write(`${JSON.stringify(dossierToJSON(dossier), null, 2)}\n`);
 				return 0;
 			}
 

@@ -52,7 +52,7 @@ export function serializeTokens(tokens: Token[]): SerializedToken[] {
 	}));
 }
 
-export function serializeDossier(dossier: Dossier): SerializedDossier {
+export function dossierToJSON(dossier: Dossier): SerializedDossier {
 	const serialized: SerializedDossier = {
 		kind: Kind.dossier,
 	};
@@ -66,14 +66,14 @@ export function serializeDossier(dossier: Dossier): SerializedDossier {
 	}
 
 	if (dossier.children && dossier.children.value.length > 0) {
-		serialized.children = dossier.children.value.map(child => serializeDossier(child));
+		serialized.children = dossier.children.value.map(child => dossierToJSON(child));
 	}
 
 	return serialized;
 }
 
 export function renderDossierTree(dossier: Dossier): string {
-	const rootNode = buildDossierTree(serializeDossier(dossier), 'root');
+	const rootNode = buildDossierTree(dossierToJSON(dossier), 'root');
 	const lines = [rootNode.label];
 
 	appendTreeLines(rootNode.children, '', lines);
@@ -83,7 +83,7 @@ export function renderDossierTree(dossier: Dossier): string {
 
 function serializeNode(node: Dossier | DossierValue): SerializedNode {
 	if (node.kind === Kind.dossier) {
-		return serializeDossier(node);
+		return dossierToJSON(node);
 	}
 
 	return serializeValue(node);
